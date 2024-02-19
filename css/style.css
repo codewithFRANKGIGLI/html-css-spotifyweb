@@ -111,6 +111,16 @@ li {
     list-style: none;
     padding-bottom: 10px;
 }
+ul {
+    position: relative;
+}
+.leftline::before {
+    position: absolute;
+    content: '\007C';
+    color: #adff2f;
+    left: -1.15rem;
+    font-size: 1.5rem;
+}
 ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install:hover, {
     filter: brightness(10);
 }
@@ -127,7 +137,7 @@ ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install
     padding: .6rem 0;
 }
 .playlist .title {
-    color: white;
+    color: #a3a3a3;
     padding-bottom: .5rem;
 }
 .addplaylist {
@@ -149,6 +159,7 @@ ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install
     transform: translate(-50%, -50%);
 }
 .personal-playlist {
+    color: #a3a3a3;
     margin: 1rem 0;
     font-size: 0.9rem;
     line-height: 2;
@@ -263,6 +274,27 @@ main h4 {
 }
 .card:hover .square {
     display: block;
+}
+#menu {
+    max-width: 625px;
+    width: 60%;
+    margin: auto;
+    gap: 1rem;
+    font-size: .8rem;
+}
+#menu a {
+    color: #a3a3a3;
+    font-weight: 600;
+    transition: .3s;
+}
+#menu a:hover {
+    color: white;
+}
+.underline {
+    width: 50%;
+    margin: auto;
+    padding-top: 5px;
+    border-bottom: 2px solid #adff2f;
 }
 /* #endregion MAIN */
 /* #region FOOTER */
