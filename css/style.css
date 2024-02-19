@@ -189,11 +189,35 @@ ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install
     color: white;
     font-weight: 700;
 }
-
 /* #endregion side_bar */
-
 /* #endregion PAGE TOP */
 /* #region MAIN */
+main {
+    background-color: #141922;
+    overflow: auto;
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+#upgrade {
+    padding: 1rem 15px;
+    position: sticky;
+    top: 0;
+    background-color: #080b12;
+    z-index: 1000;
+}
+.btn {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: .7rem 3rem;
+    border-radius: 30px;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: .3s;
+}
+.btn :hover {
+    scale: 1.1;
+}
 /* #endregion MAIN */
 /* #region FOOTER */
 /* #endregion FOOTER */
