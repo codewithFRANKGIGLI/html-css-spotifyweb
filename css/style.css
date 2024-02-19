@@ -198,6 +198,28 @@ main {
     width: 100%;
     height: calc(100vh - 90px);
 }
+main img {
+    width: 100%;
+}
+main h2 {
+    padding: 1rem;
+}
+main h4, main h2 {
+    color: white;
+}
+main h2+div, main h4+div {
+    color: #a3a3a3;
+}
+#create-for h2+div, #popular-artists h2+div {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+main h4+div {
+    padding-top: .5rem;
+}
+main h4 {
+    padding-top: 1rem;
+}
 #upgrade {
     padding: 1rem 15px;
     position: sticky;
@@ -217,6 +239,27 @@ main {
 }
 .btn:hover {
     scale: 1.1;
+}
+.square {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.square > .fa-regular {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+}
+.square {
+    display: none;
+}
+.card:hover .square {
+    display: block;
 }
 /* #endregion MAIN */
 /* #region FOOTER */
