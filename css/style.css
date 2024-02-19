@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* #endregion RESET */
 /* PALESEMENTE PRESO DA W3S PER NASCONDERE LE SCROLLBAR CHE NON CI PIACCIONO */
 /* Hide scrollbar for Chrome, Safari and Opera */
 .example::-webkit-scrollbar {
@@ -14,14 +15,184 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-
+/* #region debug */
+.debug #sidebar {
+    background-color: blue;
+}
+.debug main {
+    background-color: green;
+}
+.debug #upgrade {
+    background-color: red;
+}
+.debug #pagebottom {
+    background-color: lightcoral;
+}
+.debug .col-2 {
+    background-color: lightgoldenrodyellow;
+}
+.debug .col-8 {
+    background-color: lightblue;
+}
+/* #endregion debug */
 /* #region GENERAL */
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.container {
+    padding: 1rem;
+}
+.container-sm {
+    padding: 10px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-2 {
+    width: calc(100% / 12 * 2);
+    padding: .9rem;
+}
+.col-8 {
+    width: calc(100% / 12 * 8);
+}
+a {
+    text-decoration: none;
+}
+.flexible {
+    display: flex;
+}
+.jc-end {
+    justify-content: end;
+}
+.jc-center {
+    justify-content: center;
+}
+.jc-between {
+    justify-content: space-between;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.fd-column {
+    flex-direction: column;
+}
+.ai-center {
+    align-items: center;
+}
+.s-between {
+    justify-content: space-between;
+}
+.s-around {
+    justify-content: space-around;
+}
+.ta-center {
+    text-align: center;
+}
 /* #endregion GENERAL */
 
 /* ----------------------- DESKTOP FIRST ----------------------- */
-/* #endregion RESET */
-/* #region HEADER */
-/* #endregion HEADER */
+/* #region PAGE TOP */
+/* #region siderbar */
+#sidebar {
+    width: 230px;
+    height: calc(100vh - 90px);
+    background-color: black;
+    color: white;
+}
+.sidebar-lg {
+    height: 100%;
+}
+.logo-desktop {
+    width: 70%;
+    padding-bottom: 1rem;
+}
+li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install:hover, {
+    filter: brightness(10);
+}
+#sidebar li > a {
+    color: #a3a3a3;
+    font-size: .9rem;
+}
+#sidebar li > a > img {
+    width: 1.8rem;
+    filter: invert(0.4);
+    padding-right: .3rem;
+}
+.playlist {
+    padding: .6rem 0;
+}
+.playlist .title {
+    color: white;
+    padding-bottom: .5rem;
+}
+.add-playlist {
+    gap: .5rem;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.btn-add {
+    width: 25%;
+    aspect-ratio: 1;
+    background-color: #a3a3a3;
+    color: black;
+    position: relative;
+}
+.btn-add > .fa-solid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.personal-playlist {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    line-height: 2;
+    height: 15rem;
+    overflow: auto;
+}
+.install {
+    gap: .5rem;
+    font-size: .8rem;
+}
+.install-icon>img {
+    width: 1.3rem;
+}
+#line {
+    height: 1px;
+    background-color: #a3a3a3;
+    margin: .3rem 0;
+}
+.profile {
+    gap: .5rem;
+    padding-top: .5rem;
+}
+.profile-icon {
+    background-color: #a3a3a3;
+    border-radius: 50%;
+    padding: 2px;
+    width: 1.9rem;
+    aspect-ratio: 1;
+    position: relative;
+}
+.profile-icon > img {
+    width: 1.3rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.profile-name {
+    color: white;
+    font-weight: 700;
+}
+
+/* #endregion side_bar */
+
+/* #endregion PAGE TOP */
 /* #region MAIN */
 /* #endregion MAIN */
 /* #region FOOTER */
