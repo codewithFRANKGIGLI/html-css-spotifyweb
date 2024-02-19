@@ -121,7 +121,7 @@ ul {
     left: -1.15rem;
     font-size: 1.5rem;
 }
-ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install:hover, {
+ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install:hover, #subtitle:hover, .icon-current-song>i:hover{
     filter: brightness(10);
 }
 #sidebar li > a {
@@ -296,6 +296,9 @@ main h4 {
     padding-top: 5px;
     border-bottom: 2px solid #adff2f;
 }
+#popular-artists img, #popular-artists .square {
+    border-radius: 50%;
+}
 /* #endregion MAIN */
 /* #region FOOTER */
 /* #endregion FOOTER */
@@ -308,7 +311,21 @@ main h4 {
 }
 /* S */
 @media screen and (max-width: 700px) {
+    .col-md-6 {
+        width: 50%;
+    }
 
+    .col-md-3 {
+        width: calc(100% / 12 * 3);
+    }
+
+    .icon-current-song {
+        flex-direction: column;
+    }
+
+    .timing-btn {
+        gap: 1.5rem;
+    }
 }
 /* XS */
 @media screen and (max-width: 600px) {
