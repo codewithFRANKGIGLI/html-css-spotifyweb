@@ -18,6 +18,7 @@
 /* #region GENERAL */
 /* #endregion GENERAL */
 
+/* ----------------------- DESKTOP FIRST ----------------------- */
 /* #endregion RESET */
 /* #region HEADER */
 /* #endregion HEADER */
@@ -25,3 +26,16 @@
 /* #endregion MAIN */
 /* #region FOOTER */
 /* #endregion FOOTER */
+/* ----------------------- /DESKTOP FIRST ----------------------- */
+
+/* #region MEDIA QUERY */
+@media screen and (max-width: 1100px) {
+
+}
+@media screen and (max-width: 700px) {
+
+}
+@media screen and (max-width: 600px) {
+
+}
+/* #endregion MEDIA QUERY */
