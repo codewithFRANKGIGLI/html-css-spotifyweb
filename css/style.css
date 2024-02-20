@@ -469,9 +469,26 @@ main h4 {
     .home-s:hover, .search-s:hover, .library-s:hover {
         filter: brightness(10);
     }
-
     .home-s, .search-s, .library-s {
         transition: .3s;
+    }
+    main {
+        width: calc(100vw - 50px);
+    }
+    .song-image {
+        width: 40px;
+    }
+    .icon-current-song {
+        padding-right: 10px;
+    }
+    .timing-btn {
+        gap: .9rem;
+    }
+    .timing-bar {
+        gap: 4px;
+    }
+    .col-2 {
+        width: 50%;
     }
 }
 /* #endregion MEDIA QUERY */
