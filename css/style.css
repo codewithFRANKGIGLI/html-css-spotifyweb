@@ -36,6 +36,9 @@
 }
 /* #endregion debug */
 /* #region GENERAL */
+html {
+    overflow: hidden;
+}
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -80,23 +83,28 @@ a {
 .ai-center {
     align-items: center;
 }
-.s-between {
-    justify-content: space-between;
-}
 .s-around {
     justify-content: space-around;
 }
 .ta-center {
     text-align: center;
 }
+.px-2 {
+    padding-bottom: 1rem;
+}
+.p-0 {
+    padding: 0;
+}
 /* #endregion GENERAL */
 
 /* ----------------------- DESKTOP FIRST ----------------------- */
 /* #region PAGE TOP */
 /* #region siderbar */
-#sidebar {
-    width: 230px;
+#page-top {
     height: calc(100vh - 90px);
+}
+#sidebar {
+    width: 300px;
     background-color: black;
     color: white;
 }
@@ -119,10 +127,11 @@ ul {
     content: '\007C';
     color: #adff2f;
     left: -1.15rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
-ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install:hover, #subtitle:hover, .icon-current-song>i:hover{
+ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install:hover, #subtitle:hover, .icon-current-song>i:hover {
     filter: brightness(10);
+    cursor: pointer;
 }
 #sidebar li > a {
     color: #a3a3a3;
@@ -169,6 +178,7 @@ ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install
 .install {
     gap: .5rem;
     font-size: .8rem;
+    color: #a3a3a3;
 }
 .install-icon>img {
     width: 1.3rem;
@@ -201,13 +211,11 @@ ul > li > a:hover, .add-playlist:hover, .personal-playlist>ul>li:hover, .install
     font-weight: 700;
 }
 /* #endregion side_bar */
-/* #endregion PAGE TOP */
 /* #region MAIN */
 main {
     background-color: #141922;
     overflow: auto;
     width: 100%;
-    height: calc(100vh - 90px);
 }
 main img {
     width: 100%;
@@ -255,7 +263,6 @@ main h4 {
     scale: 1.1;
 }
 .square {
-    background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -275,6 +282,9 @@ main h4 {
 .card:hover .square {
     display: block;
 }
+.card:hover {
+    filter: brightness(150%) saturate(120%);
+  } 
 #menu {
     max-width: 625px;
     width: 60%;
@@ -300,8 +310,100 @@ main h4 {
     border-radius: 50%;
 }
 /* #endregion MAIN */
-/* #region FOOTER */
-/* #endregion FOOTER */
+/* #endregion PAGE TOP */
+/* #region PAGE BOTTOM */
+#page-bottom {
+    height: 90px;
+    position: relative;
+    background-color: #282828;
+    color: white;
+}
+.song {
+    padding-left: 10px;
+}
+.song-title {
+    padding: 10px;
+    font-size: .9rem;
+}
+#subtitle {
+    font-size: 0.6rem;
+    color: #a3a3a3;
+    transition: .2s;
+}
+.song-image {
+    width: 50px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+}
+.song-image>img {
+    width: 100%;
+}
+.icon-current-song {
+    gap: .5rem;
+    color: #a3a3a3;
+}
+.timing-btn>i:hover, .volume-icon>i:hover {
+    scale: 1.2;
+}
+.timing-btn>.fa-circle-play {
+    transition: .2s;
+}
+#timing {
+    width: 80%;
+    line-height: 3rem;
+    padding-top: 1rem;
+}
+.timing-btn {
+    gap: 2rem;
+}
+.timing-bar {
+    width: 60%;
+    font-size: .6rem;
+    max-width: 600px;
+}
+.bar {
+    width: 80%;
+    margin: auto;
+    background-color: #a3a3a3;
+    height: 4px;
+    border-radius: 2px;
+    position: relative;
+}
+.bar:hover .real-time-bar {
+    background-color: #adff2f;
+}
+.bar:hover .joystick {
+    display: block;
+}
+.real-time-bar {
+    width: 20%;
+    background-color: #a3a3a3;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+}
+.joystick {
+    width: 13px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: -4px;
+    display: none;
+}
+.volume {
+    margin-right: 1rem;
+}
+.volume-icon {
+    gap: 1rem;
+    padding-right: .5rem;
+}
+.sound {
+    width: 50%;
+}
+/* #endregion PAGE BOTTOM */
 /* ----------------------- /DESKTOP FIRST ----------------------- */
 
 /* #region MEDIA QUERY */
@@ -314,15 +416,12 @@ main h4 {
     .col-md-6 {
         width: 50%;
     }
-
     .col-md-3 {
         width: calc(100% / 12 * 3);
     }
-
     .icon-current-song {
         flex-direction: column;
     }
-
     .timing-btn {
         gap: 1.5rem;
     }
